@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artistas - Enclave Trovador</title>
+  <meta name="description" content="Artistas de Enclave Trovador filtrados por disciplina y localidad.">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="sitio-header">
+    <a class="marca" href="index.html"><span class="marca-simbolo">ET</span><span>Enclave Trovador</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+    <nav id="menu-principal" class="menu" aria-label="Menu principal">
+      <a href="index.html">Inicio</a>
+      <a href="artistas.html" aria-current="page">Artistas</a>
+      <a href="agenda.html">Agenda</a>
+      <a href="sumate.html">Sumate</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="pagina">
+    <section class="encabezado-pagina">
+      <p class="volanta">Registro abierto</p>
+      <h1>Artistas</h1>
+      <p>Perfiles ficticios para mostrar el funcionamiento inicial del sitio. Los filtros leen disciplinas y localidades desde el archivo de datos.</p>
+    </section>
+
+    <section class="panel-filtros" aria-label="Filtros de artistas">
+      <label>
+        Disciplina
+        <select id="filtro-disciplina">
+          <option value="">Todas</option>
+        </select>
+      </label>
+      <label>
+        Localidad
+        <select id="filtro-localidad">
+          <option value="">Todas</option>
+        </select>
+      </label>
+      <button class="boton secundario" type="button" id="limpiar-filtros">Limpiar</button>
+    </section>
+
+    <section id="artistas-lista" class="grilla-tarjetas" aria-live="polite"></section>
+  </main>
+
+  <footer class="sitio-footer">
+    <p>Enclave Trovador - Patagonia cultural</p>
+    <p><a href="sumate.html">Sumar artista</a></p>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
