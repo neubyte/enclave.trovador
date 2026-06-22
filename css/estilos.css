@@ -1,13 +1,17 @@
 :root {
-  --fondo: #171211;
-  --fondo-suave: #241b18;
-  --crema: #f3e6cf;
-  --crema-apagado: #d8c6a8;
-  --terracota: #b65f3f;
-  --terracota-oscuro: #8f432f;
-  --vino: #6d1f2f;
-  --linea: rgba(243, 230, 207, 0.18);
-  --sombra: rgba(0, 0, 0, 0.32);
+  --fondo: #100b08;
+  --fondo-suave: #1d130f;
+  --fondo-card: #261812;
+  --crema: #fff0cf;
+  --crema-apagado: #d9bd8e;
+  --dorado: #d8a63a;
+  --ambar: #c77724;
+  --terracota: #a84f31;
+  --terracota-oscuro: #74321f;
+  --linea: rgba(216, 166, 58, 0.28);
+  --linea-fuerte: rgba(216, 166, 58, 0.52);
+  --sombra: rgba(0, 0, 0, 0.48);
+  --brillo: rgba(216, 166, 58, 0.28);
 }
 
 * {
@@ -39,7 +43,7 @@ a {
   justify-content: space-between;
   gap: 24px;
   padding: 18px clamp(18px, 5vw, 56px);
-  background: rgba(23, 18, 17, 0.94);
+  background: rgba(16, 11, 8, 0.94);
   border-bottom: 1px solid var(--linea);
   backdrop-filter: blur(12px);
 }
@@ -62,8 +66,8 @@ a {
   height: 38px;
   place-items: center;
   flex: 0 0 auto;
-  border: 1px solid var(--terracota);
-  color: var(--terracota);
+  border: 1px solid var(--dorado);
+  color: var(--dorado);
   font-size: 0.82rem;
 }
 
@@ -82,7 +86,7 @@ a {
 .menu a:hover,
 .menu a[aria-current="page"] {
   color: var(--crema);
-  background: rgba(182, 95, 63, 0.18);
+  background: rgba(216, 166, 58, 0.15);
 }
 
 .menu-toggle {
@@ -95,37 +99,49 @@ a {
 }
 
 .hero {
-  min-height: 76vh;
+  position: relative;
+  min-height: 82vh;
   display: grid;
   align-items: end;
   padding: clamp(64px, 12vw, 140px) clamp(18px, 7vw, 80px);
   background:
-    linear-gradient(180deg, rgba(23, 18, 17, 0.28), rgba(23, 18, 17, 0.94)),
-    radial-gradient(circle at 24% 20%, rgba(182, 95, 63, 0.32), transparent 30%),
-    linear-gradient(135deg, #2d211d 0%, #171211 52%, #3a1420 100%);
+    linear-gradient(90deg, rgba(16, 11, 8, 0.92) 0%, rgba(16, 11, 8, 0.76) 42%, rgba(16, 11, 8, 0.34) 100%),
+    linear-gradient(180deg, rgba(16, 11, 8, 0.16), rgba(16, 11, 8, 0.88)),
+    url("../img/guitar_hero.jpg") center right / cover no-repeat,
+    #100b08;
   border-bottom: 1px solid var(--linea);
+  overflow: hidden;
 }
 
 .hero::before {
   content: "";
   position: absolute;
-  inset: 92px 0 auto;
-  height: 34vh;
+  inset: auto 0 0;
+  height: 42%;
   pointer-events: none;
   background:
-    linear-gradient(145deg, transparent 44%, rgba(243, 230, 207, 0.1) 45%, transparent 47%),
-    linear-gradient(160deg, transparent 56%, rgba(182, 95, 63, 0.16) 57%, transparent 60%);
-  opacity: 0.8;
+    linear-gradient(180deg, transparent, rgba(16, 11, 8, 0.9)),
+    radial-gradient(circle at 20% 82%, rgba(216, 166, 58, 0.22), transparent 28%);
+  opacity: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: rgba(16, 11, 8, 0.18);
 }
 
 .hero-contenido {
   position: relative;
+  z-index: 1;
   max-width: 780px;
 }
 
 .volanta {
   margin: 0 0 12px;
-  color: var(--terracota);
+  color: var(--dorado);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -149,6 +165,10 @@ h3 {
 h1 {
   font-size: clamp(2.6rem, 8vw, 6.8rem);
   max-width: 10ch;
+  color: var(--crema);
+  text-shadow:
+    0 0 22px rgba(216, 166, 58, 0.34),
+    0 2px 22px rgba(0, 0, 0, 0.72);
 }
 
 h2 {
@@ -187,14 +207,20 @@ h3 {
 }
 
 .boton.primario {
-  color: #180f0d;
-  background: var(--terracota);
+  color: #140c07;
+  background: linear-gradient(180deg, #f0c25e, var(--dorado));
+  border-color: rgba(255, 240, 207, 0.28);
+  box-shadow: 0 12px 34px rgba(216, 166, 58, 0.24);
 }
 
 .boton.secundario {
   color: var(--crema);
-  background: transparent;
-  border-color: var(--linea);
+  background: rgba(16, 11, 8, 0.38);
+  border-color: var(--linea-fuerte);
+}
+
+.boton:hover {
+  transform: translateY(-1px);
 }
 
 .bloque,
@@ -230,7 +256,9 @@ h3 {
 .evento,
 .contacto-caja,
 .llamado {
-  background: var(--fondo-suave);
+  background:
+    linear-gradient(180deg, rgba(216, 166, 58, 0.05), transparent 42%),
+    var(--fondo-card);
   border: 1px solid var(--linea);
   box-shadow: 0 18px 48px var(--sombra);
 }
@@ -244,7 +272,7 @@ h3 {
 .destacados span,
 .tarjeta-meta,
 .evento-fecha {
-  color: var(--terracota);
+  color: var(--dorado);
   font-weight: 700;
 }
 
@@ -276,7 +304,7 @@ h3 {
   margin-bottom: 26px;
   padding: 18px;
   border: 1px solid var(--linea);
-  background: rgba(36, 27, 24, 0.72);
+  background: rgba(29, 19, 15, 0.84);
 }
 
 .panel-filtros label {
@@ -313,8 +341,8 @@ select {
   width: 58px;
   height: 58px;
   place-items: center;
-  color: var(--crema);
-  background: var(--vino);
+  color: #140c07;
+  background: linear-gradient(180deg, var(--dorado), var(--ambar));
   font-weight: 700;
   font-size: 1.2rem;
 }
@@ -328,7 +356,8 @@ select {
 .tag {
   padding: 5px 8px;
   color: var(--crema);
-  background: rgba(109, 31, 47, 0.72);
+  background: rgba(116, 50, 31, 0.82);
+  border: 1px solid rgba(216, 166, 58, 0.22);
   font-size: 0.82rem;
 }
 
@@ -371,7 +400,7 @@ select {
 }
 
 .contacto-caja a {
-  color: var(--terracota);
+  color: var(--dorado);
 }
 
 .sitio-footer {
@@ -424,7 +453,11 @@ select {
   }
 
   .hero {
-    min-height: 68vh;
+    min-height: 72vh;
+    background:
+      linear-gradient(180deg, rgba(16, 11, 8, 0.72), rgba(16, 11, 8, 0.96)),
+      url("../img/guitar_hero.jpg") 62% center / cover no-repeat,
+      #100b08;
   }
 
   .dos-columnas,

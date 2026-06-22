@@ -11,6 +11,7 @@ Primera version de un sitio estatico para GitHub Pages. Usa HTML, CSS y JavaScri
 - `contacto.html`: datos de contacto.
 - `css/estilos.css`: estilos responsive y paleta visual.
 - `js/app.js`: menu movil, carga de datos y filtros.
+- `img/guitar_hero.jpg`: imagen principal de portada.
 - `data/artistas.json`: artistas ficticios.
 - `data/agenda.json`: eventos ficticios.
 
