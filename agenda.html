@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda - Enclave Trovador</title>
+  <meta name="description" content="Agenda cultural de Enclave Trovador.">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="sitio-header">
+    <a class="marca" href="index.html"><span class="marca-simbolo">ET</span><span>Enclave Trovador</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+    <nav id="menu-principal" class="menu" aria-label="Menu principal">
+      <a href="index.html">Inicio</a>
+      <a href="artistas.html">Artistas</a>
+      <a href="agenda.html" aria-current="page">Agenda</a>
+      <a href="sumate.html">Sumate</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="pagina">
+    <section class="encabezado-pagina">
+      <p class="volanta">Encuentros</p>
+      <h1>Agenda</h1>
+      <p>Eventos ficticios cargados desde JSON para probar una agenda facil de actualizar y publicar en GitHub Pages.</p>
+    </section>
+
+    <section id="agenda-lista" class="lista-agenda" aria-live="polite"></section>
+  </main>
+
+  <footer class="sitio-footer">
+    <p>Enclave Trovador - Patagonia cultural</p>
+    <p><a href="contacto.html">Proponer fecha</a></p>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
