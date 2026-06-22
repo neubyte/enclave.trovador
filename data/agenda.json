@@ -1,0 +1,23 @@
+[
+  {
+    "titulo": "Ronda de canciones al atardecer",
+    "fecha": "2026-08-15",
+    "localidad": "Bariloche",
+    "espacio": "Centro Cultural del Lago",
+    "descripcion": "Encuentro acustico con compositoras invitadas y feria editorial independiente."
+  },
+  {
+    "titulo": "Relatos de estepa y tren",
+    "fecha": "2026-09-04",
+    "localidad": "Esquel",
+    "espacio": "Viejo Galpon",
+    "descripcion": "Narracion oral, archivo barrial y musica en vivo para recuperar memorias del territorio."
+  },
+  {
+    "titulo": "Muestra Sur Impreso",
+    "fecha": "2026-10-12",
+    "localidad": "Trelew",
+    "espacio": "Casa Taller Viento",
+    "descripcion": "Exhibicion de grabado, poesia visual y tintes naturales con artistas de la red."
+  }
+]
