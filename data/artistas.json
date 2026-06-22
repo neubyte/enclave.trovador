@@ -1,0 +1,37 @@
+[
+  {
+    "nombre": "Lina Rupil",
+    "disciplina": "Cancion de autor",
+    "localidad": "Bariloche",
+    "bio": "Compositora de paisajes minimos, guitarras criollas y relatos de costa fria.",
+    "etiquetas": ["guitarra", "cancion", "montana"]
+  },
+  {
+    "nombre": "Tomas Huenu",
+    "disciplina": "Narracion oral",
+    "localidad": "Esquel",
+    "bio": "Cuenta historias de fogon, memoria ferroviaria y caminos de estepa.",
+    "etiquetas": ["relato", "memoria", "fogones"]
+  },
+  {
+    "nombre": "Mora Calfu",
+    "disciplina": "Artes visuales",
+    "localidad": "El Bolson",
+    "bio": "Trabaja tintes naturales, grabado y cuadernos de viaje sobre flora nativa.",
+    "etiquetas": ["grabado", "tintes", "flora"]
+  },
+  {
+    "nombre": "Rafael Antu",
+    "disciplina": "Musica instrumental",
+    "localidad": "Comodoro Rivadavia",
+    "bio": "Explora charango, loops y ritmos del sur con una mirada contemporanea.",
+    "etiquetas": ["charango", "loops", "sur"]
+  },
+  {
+    "nombre": "Clara Millan",
+    "disciplina": "Poesia",
+    "localidad": "Trelew",
+    "bio": "Poeta y editora artesanal; coordina lecturas en bibliotecas y centros culturales.",
+    "etiquetas": ["poesia", "edicion", "bibliotecas"]
+  }
+]
