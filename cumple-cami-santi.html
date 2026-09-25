@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#08131f" />
+<meta name="description" content="El Superclásico del Año: cumpleaños de Camilo y Santiago. Domingo 4 de octubre, de 17 a 20 h.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="⚽ El Superclásico del Año — Camilo & Santiago">
+<meta property="og:description" content="Domingo 4 de octubre · 17:00 a 20:00 h · ¡Te esperamos!">
+<meta property="og:url" content="https://neubyte.github.io/enclave.trovador/cumple-cami-santi/">
+<meta property="og:image" content="https://neubyte.github.io/enclave.trovador/cumple-cami-santi-preview.jpg">
+<meta property="og:image:secure_url" content="https://neubyte.github.io/enclave.trovador/cumple-cami-santi/cumple-cami-santi-preview.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Invitación al cumpleaños de Camilo y Santiago">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="⚽ El Superclásico del Año — Camilo & Santiago">
+<meta name="twitter:description" content="Domingo 4 de octubre · 17:00 a 20:00 h">
+<meta name="twitter:image" content="https://neubyte.github.io/enclave.trovador/cumple-cami-santi-preview.jpg">
+
+<title>El Superclásico del Año — Camilo & Santiago</title>
+<link rel="canonical" href="https://neubyte.github.io/enclave.trovador/cumple-cami-santi/">
+<style>
+:root {
+  --azul:#063b7a;
+  --amarillo:#f4c316;
+  --rojo:#d71920;
+  --blanco:#ffffff;
+  --negro:#07111c;
+  --card:rgba(7,17,28,.82);
+  --line:rgba(255,255,255,.14);
+}
+*{box-sizing:border-box}
+button,a{-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:#fff;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(0,82,190,.35), transparent 28%),
+    radial-gradient(circle at 85% 10%, rgba(215,25,32,.28), transparent 28%),
+    linear-gradient(180deg,#040a11,#08131f 38%,#07111c);
+}
+button,a{font:inherit}
+.wrap{max-width:760px;margin:auto;padding:0 16px 44px}
+.hero{max-width:760px;margin:0 auto;padding:14px 12px 0}
+.hero-image{display:block;width:100%;height:auto;border-radius:22px;border:1px solid rgba(255,255,255,.12)}
+.enter{
+  position:relative;z-index:2;
+  margin:0 16px calc(8px + env(safe-area-inset-bottom));
+  width:min(92%,520px);
+  border:0;border-radius:18px;
+  padding:16px 20px;
+  font-weight:900;font-size:1.05rem;
+  color:#07111c;
+  background:linear-gradient(90deg,var(--amarillo),#fff 48%,#ffdedf 55%,#ff6d72);
+  box-shadow:0 14px 34px rgba(0,0,0,.42);
+  cursor:pointer;
+}
+.section{padding:34px 0}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:22px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 18px 50px rgba(0,0,0,.22);
+}
+.kicker{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;opacity:.72}
+h2{margin:.35rem 0 1rem;font-size:clamp(1.6rem,6vw,2.4rem)}
+p{line-height:1.5}
+.teams{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.team{
+  min-height:118px;border:1px solid var(--line);border-radius:20px;padding:18px;
+  color:white;font-weight:900;font-size:1.08rem;cursor:pointer;position:relative;overflow:hidden;
+  transition:.2s transform,.2s border-color,.2s box-shadow;
+}
+.team:hover,.team:focus{transform:translateY(-2px)}
+.team.boca{background:linear-gradient(145deg,#052d63 0 58%,#e8b900 58% 72%,#063b7a 72%)}
+.team.river{background:linear-gradient(145deg,#fff 0 46%,#d71920 46% 61%,#fff 61%);color:#111}
+.team.selected{outline:3px solid #fff;box-shadow:0 0 0 5px rgba(255,255,255,.1),0 12px 30px rgba(0,0,0,.28)}
+.score{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center;margin:22px 0 0}
+.scorebox{
+  text-align:center;border-radius:18px;padding:14px 10px;background:#02070b;border:1px solid var(--line)
+}
+.scorebox strong{display:block;font-size:2.2rem}
+.scorebox small{opacity:.72}
+.vs{font-weight:900;opacity:.5}
+.event-info{display:grid;gap:10px;margin:16px 0}
+.event-row{display:flex;align-items:center;gap:12px;padding:13px 14px;border-radius:16px;background:#02070b;border:1px solid var(--line)}
+.event-icon{font-size:1.35rem;flex:0 0 auto}
+.event-row small{display:block;opacity:.62;margin-bottom:2px}
+.event-row strong{display:block;font-size:1rem;line-height:1.3}
+.counter{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+.unit{text-align:center;background:#02070b;border:1px solid var(--line);border-radius:16px;padding:14px 8px}
+.unit b{font-size:1.6rem;display:block}
+.unit span{font-size:.78rem;opacity:.65}
+.actions{display:grid;gap:10px;margin-top:18px}
+.btn{
+  display:block;width:100%;text-align:center;text-decoration:none;
+  padding:14px 16px;border-radius:16px;border:1px solid var(--line);
+  background:#0e1d2b;color:#fff;font-weight:800;cursor:pointer;
+}
+.btn.primary{background:linear-gradient(90deg,#f3c111,#fff 48%,#ef3b40);color:#101820;border:none}
+.btn.disabled{opacity:.42;cursor:not-allowed}
+.penal-wrap{position:relative;aspect-ratio:16/10;border-radius:22px;overflow:hidden;background:
+  linear-gradient(#1f7a43 0 64%,#17813f 64%);
+  border:1px solid var(--line);
+}
+.goal{
+  position:absolute;left:12%;right:12%;top:13%;height:48%;
+  border:5px solid #fff;border-bottom-width:7px;
+  background:
+   repeating-linear-gradient(90deg,transparent 0 26px,rgba(255,255,255,.16) 26px 28px),
+   repeating-linear-gradient(0deg,transparent 0 22px,rgba(255,255,255,.16) 22px 24px);
+}
+.target{position:absolute;width:25%;height:48%;top:13%;border:0;background:transparent;cursor:pointer}
+.target.left{left:12%} .target.center{left:37.5%} .target.right{right:12%}
+.ball{
+  position:absolute;
+  left:50%;
+  bottom:11%;
+  transform:translateX(-50%);
+  font-size:48px;
+  transition:left .48s cubic-bezier(.2,.8,.2,1),
+             bottom .48s cubic-bezier(.2,.8,.2,1),
+             transform .48s cubic-bezier(.2,.8,.2,1);
+  z-index:4;
+}
+.goalmsg{position:absolute;left:0;right:0;bottom:4%;text-align:center;font-size:1.5rem;font-weight:1000;text-shadow:0 3px 10px #000}
+.map-card{overflow:hidden;padding:0}
+.map-head{padding:20px 20px 14px}
+.map-frame{width:100%;height:340px;border:0;display:block}
+.map-actions{padding:14px 20px 20px}
+.footer{text-align:center;opacity:.65;font-size:.82rem;padding-top:16px}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:99;overflow:hidden}
+.confetti i{position:absolute;top:-20px;width:10px;height:16px;animation:fall 1.8s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.9}}
+@media (max-width:440px){
+  .wrap{padding-left:12px;padding-right:12px}
+  .card{padding:18px}
+  .unit{padding:12px 4px}
+  .unit b{font-size:1.35rem}
+  .unit span{font-size:.68rem}
+}
+</style>
+</head>
+<body>
+<section class="hero" id="inicio"><img class="hero-image" src="cumple-cami-santi-preview.jpg" alt="El Superclásico del Año, cumple de Camilo y Santiago"></section>
+
+<div class="wrap" style="padding-top:16px">
+  <button class="enter" style="position:static;margin:0 auto;display:block"
+    onclick="document.querySelector('#elegi').scrollIntoView({behavior:'smooth'})">
+    ⚽ Entrar a la cancha
+  </button>
+</div>
+
+<main class="wrap">
+  <section class="section" id="elegi">
+    <div class="card">
+      <div class="kicker">Primera jugada</div>
+      <h2>Elegí tu tribuna</h2>
+      <p>¿Con quién alentás hoy? Elegí un lado. Tranquilo: acá el único resultado obligatorio es terminar comiendo torta.</p>
+      <div class="teams">
+        <button class="team boca" id="bocaBtn" onclick="chooseTeam('boca')">🔵🟡<br>Camilo</button>
+        <button class="team river" id="riverBtn" onclick="chooseTeam('river')">⚪🔴<br>Santiago</button>
+      </div>
+      <div class="score">
+        <div class="scorebox"><small>Camilo</small><strong id="bocaScore">11</strong></div>
+        <div class="vs">—</div>
+        <div class="scorebox"><small>Santiago</small><strong id="riverScore">11</strong></div>
+      </div>
+      <p id="teamMsg" style="text-align:center;margin-bottom:0;opacity:.78">El marcador arranca empatado.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="card">
+      <div class="kicker">Fecha del partido</div>
+      <h2>Domingo 4 de octubre</h2>
+      <p><strong>Camilo y Santiago cumplen 11.</strong></p>
+      <div class="event-info">
+        <div class="event-row">
+          <span class="event-icon">🕔</span>
+          <div><small>Horario</small><strong>17:00 a 20:00 h</strong></div>
+        </div>
+        <div class="event-row">
+          <span class="event-icon">📍</span>
+          <div><small>Lugar</small><strong>Saladillo 4898-4760, Neuquén</strong></div>
+        </div>
+      </div>
+      <div class="counter">
+        <div class="unit"><b id="days">--</b><span>días</span></div>
+        <div class="unit"><b id="hours">--</b><span>horas</span></div>
+        <div class="unit"><b id="mins">--</b><span>minutos</span></div>
+        <div class="unit"><b id="secs">--</b><span>segundos</span></div>
+      </div>
+      <div class="actions">
+        <button class="btn primary" onclick="shareWhatsApp()">✅ Confirmar asistencia</button>
+        <a class="btn" href="https://maps.app.goo.gl/YKvJ166bS27GcrrD7" target="_blank" rel="noopener noreferrer">📍 Ver ubicación en Google Maps</a>
+        <button class="btn" onclick="downloadICS()">📅 Agregar al calendario</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="card">
+      <div class="kicker">Tiempo extra</div>
+      <h2>Definilo por penales</h2>
+      <p>Elegí dónde patear.</p>
+      <div class="penal-wrap" id="penal">
+        <div class="goal"></div>
+        <button aria-label="Patear a la izquierda" class="target left" onclick="shoot('left')"></button>
+        <button aria-label="Patear al centro" class="target center" onclick="shoot('center')"></button>
+        <button aria-label="Patear a la derecha" class="target right" onclick="shoot('right')"></button>
+        <div class="ball" id="ball">⚽</div>
+        <div class="goalmsg" id="goalmsg">Elegí un rincón</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="card" style="text-align:center">
+      <div class="kicker">Final del partido</div>
+      <h2>Dos equipos. Una sola fiesta.</h2>
+      <p>Camilo & Santiago · 11 años</p>
+      <button class="btn primary" onclick="shareWhatsApp()">Confirmo que voy</button>
+    </div>
+    <div class="footer">Invitación interactiva personalizada</div>
+  </section>
+
+  <section class="section" id="mapa">
+    <div class="card map-card">
+      <div class="map-head">
+        <div class="kicker">Dónde jugamos</div>
+        <h2 style="margin-bottom:.35rem">Ubicación</h2>
+        <p style="margin-top:0">Saladillo 4898-4760, Neuquén</p>
+      </div>
+      <iframe
+        class="map-frame"
+        title="Mapa del lugar del cumpleaños"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Saladillo%204898-4760%2C%20Neuqu%C3%A9n&output=embed">
+      </iframe>
+      <div class="map-actions">
+        <a class="btn primary"
+           href="https://maps.app.goo.gl/YKvJ166bS27GcrrD7"
+           target="_blank"
+           rel="noopener noreferrer">📍 Abrir en Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="card" style="text-align:center">
+      <h2 style="margin:0">¡Te esperamos!</h2>
+    </div>
+  </section>
+
+</main>
+
+<div class="confetti" id="confetti"></div>
+
+<script>
+const EVENT_DATE = new Date('2026-10-04T17:00:00-03:00');
+let choice = localStorage.getItem('equipoCumple') || null;
+
+function chooseTeam(team){
+  choice = team;
+  localStorage.setItem('equipoCumple', team);
+  document.getElementById('bocaBtn').classList.toggle('selected', team==='boca');
+  document.getElementById('riverBtn').classList.toggle('selected', team==='river');
+  document.getElementById('bocaScore').textContent = team==='boca' ? '12' : '11';
+  document.getElementById('riverScore').textContent = team==='river' ? '12' : '11';
+  document.getElementById('teamMsg').textContent = team==='boca'
+    ? 'Elegiste la tribuna de Camilo 🔵🟡'
+    : 'Elegiste la tribuna de Santiago ⚪🔴';
+  burst();
+}
+if(choice) chooseTeam(choice);
+
+function tick(){
+  const diff = EVENT_DATE - new Date();
+  if(diff <= 0){
+    days.textContent = hours.textContent = mins.textContent = secs.textContent = '0';
+    return;
+  }
+  days.textContent = Math.floor(diff/86400000);
+  hours.textContent = Math.floor((diff%86400000)/3600000);
+  mins.textContent = Math.floor((diff%3600000)/60000);
+  secs.textContent = Math.floor((diff%60000)/1000).toString().padStart(2,'0');
+}
+tick(); setInterval(tick, 1000);
+
+function shareWhatsApp(){
+  const team = choice === 'boca' ? 'Camilo/Boca' : choice === 'river' ? 'Santiago/River' : 'todavía no elegí tribuna';
+  const msg = `¡Hola! Confirmo asistencia al cumple de Camilo y Santiago ⚽🎉\nMi tribuna: ${team}`;
+  window.open('https://wa.me/5492996238668?text=' + encodeURIComponent(msg), '_blank');
+}
+
+function downloadICS(){
+  const text = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//Cumple Camilo y Santiago//ES',
+    'BEGIN:VEVENT',
+    'UID:camilo-santiago-20261004@cumple',
+    'DTSTAMP:20260924T203000Z',
+    'DTSTART:20261004T200000Z',
+    'DTEND:20261004T230000Z',
+    'SUMMARY:Cumple de Camilo y Santiago',
+    'DESCRIPTION:El Superclásico del Año. Dos equipos, una sola fiesta.',
+    'END:VEVENT',
+    'END:VCALENDAR'
+  ].join('\r\n');
+  const blob = new Blob([text], {type:'text/calendar'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'Cumple_Camilo_Santiago.ics';
+  a.click(); URL.revokeObjectURL(url);
+}
+
+let shotInProgress = false;
+
+function shoot(side){
+  if(shotInProgress) return;
+  shotInProgress = true;
+
+  const ball = document.getElementById('ball');
+  const msg = document.getElementById('goalmsg');
+
+  ball.style.transition = 'none';
+  ball.style.left = '50%';
+  ball.style.bottom = '11%';
+  ball.style.transform = 'translateX(-50%) scale(1)';
+  msg.textContent = '¡Va el remate!';
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      ball.style.transition =
+        'left .48s cubic-bezier(.2,.8,.2,1), bottom .48s cubic-bezier(.2,.8,.2,1), transform .48s cubic-bezier(.2,.8,.2,1)';
+
+      const positions = {
+        left:   { left:'27%', bottom:'54%' },
+        center: { left:'50%', bottom:'50%' },
+        right:  { left:'73%', bottom:'54%' }
+      };
+      const p = positions[side] || positions.center;
+
+      ball.style.left = p.left;
+      ball.style.bottom = p.bottom;
+      ball.style.transform = 'translateX(-50%) scale(.58)';
+    });
+  });
+
+  setTimeout(() => {
+    msg.textContent = '¡GOOOOL! ⚽🎉 Tocá otro rincón para patear de nuevo';
+    burst();
+    shotInProgress = false;
+  }, 520);
+}
+
+function burst(){
+  const box = document.getElementById('confetti');
+  const colors = ['#f4c316','#063b7a','#ffffff','#d71920'];
+  for(let i=0;i<36;i++){
+    const el=document.createElement('i');
+    el.style.left=Math.random()*100+'vw';
+    el.style.background=colors[Math.floor(Math.random()*colors.length)];
+    el.style.animationDelay=(Math.random()*.4)+'s';
+    el.style.transform=`rotate(${Math.random()*360}deg)`;
+    box.appendChild(el);
+    setTimeout(()=>el.remove(),2300);
+  }
+}
+</script>
+</body>
+</html>
